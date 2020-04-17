@@ -23,3 +23,10 @@ library("MeSH.Xtr.eg.db")
 library("dplyr")
 library("ggplot2")
 library("PoiClaClu")
+
+
+seqdata <- read.table("count_matrixH.tabular") 
+#removing first columns fro the uploaded file
+countdata <- seqdata[,-(1)] 
+rownames(countdata) <- seqdata[,1]
+head(countdata)
