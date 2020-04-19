@@ -39,6 +39,9 @@ sampleTable <-data.frame(timepoints = as.factor(timepoints), condition = as.fact
 rownames(sampleTable)=colnames(countdata)
 sampleTable
 
+#PCA plot for the log transformed data
+rld <- rlog(dds, blind = FALSE)
+plotPCA(rld, intgroup = c("condition", "timepoints"))
 
 #Differential expression analysis using DESeq2
 
@@ -53,6 +56,8 @@ dds$condition <- factor(dds$condition, levels = c("methimazole","control"))
 dds$timepoints <-factor(dds$timepoints, levels = c("t1","t2", "t3"))
 
 
+
+
 #running dds
 dds <- DESeq(dds)
 
@@ -65,7 +70,7 @@ res <- results(dds, contrast=c("condition","methimazole","control"))
 resultsNames(dds) #this gives the contrasts that can be done
 res
 summary(res)
+dds <- DESeq(dds, betaPrior = FALSE)
 
-#PCA plot for the log transformed data
-rld <- rlog(dds, blind = FALSE)
-plotPCA(rld, intgroup = c("condition", "timepoints"))
+
+
