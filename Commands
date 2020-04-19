@@ -15,3 +15,70 @@ $ module load samtools/1.6.0
 <<downloaded the genome sequence from Ensembl Xenopus tropical - v9.1.dna.toplevel.fa.gz>>
 
 #use Bowtie2 to build the reference index
+bowtie2-build Xenopus_tropicalis.Xenopus_tropicalis_v9.1.dna.toplevel.fa xenopusIndexX9En
+
+
+### raw sequences: for paired-end sequencing, there are two files per sample, need to concatenate them
+
+##change the library to <folder1>
+
+cat NS-SG-10S-SG-01_S1_L006_R1_001.fastq.gz NS-SG-10S-SG-01_S1_L007_R1_001.fastq.gz > string_S1_R1.fastq.gz
+
+cat NS-SG-10S-SG-01_S1_L006_R2_001.fastq.gz NS-SG-10S-SG-01_S1_L007_R2_001.fastq.gz > string_S1_R2.fastq.gz
+
+
+cat NS-SG-10S-SG-02_S2_L006_R1_001.fastq.gz NS-SG-10S-SG-02_S2_L007_R1_001.fastq.gz > string_S2_R1.fastq.gz
+
+cat NS-SG-10S-SG-02_S2_L006_R2_001.fastq.gz NS-SG-10S-SG-02_S2_L007_R2_001.fastq.gz > string_S2_R2.fastq.gz
+
+
+cat NS-SG-10S-SG-03_S3_L006_R1_001.fastq.gz NS-SG-10S-SG-03_S3_L007_R1_001.fastq.gz > string_S3_R1.fastq.gz
+
+cat NS-SG-10S-SG-03_S3_L006_R2_001.fastq.gz NS-SG-10S-SG-03_S3_L007_R2_001.fastq.gz > string_S3_R2.fastq.gz
+
+
+cat NS-SG-10S-SG-04_S4_L006_R1_001.fastq.gz NS-SG-10S-SG-04_S4_L007_R1_001.fastq.gz > string_S4_R1.fastq.gz
+
+cat NS-SG-10S-SG-04_S4_L006_R2_001.fastq.gz NS-SG-10S-SG-04_S4_L007_R2_001.fastq.gz > string_S4_R2.fastq.gz
+
+
+cat NS-SG-10S-SG-05_S5_L006_R1_001.fastq.gz NS-SG-10S-SG-05_S5_L007_R1_001.fastq.gz > string_S5_R1.fastq.gz
+
+
+cat NS-SG-10S-SG-05_S5_L006_R2_001.fastq.gz NS-SG-10S-SG-05_S5_L007_R2_001.fastq.gz > string_S5_R2.fastq.gz
+
+
+cat NS-SG-10S-SG-06_S6_L006_R1_001.fastq.gz NS-SG-10S-SG-06_S6_L007_R1_001.fastq.gz > string_S6_R1.fastq.gz
+
+
+cat NS-SG-10S-SG-06_S6_L006_R2_001.fastq.gz NS-SG-10S-SG-06_S6_L007_R2_001.fastq.gz > string_S6_R2.fastq.gz
+
+
+
+cat NS-SG-10S-SG-07_S7_L006_R1_001.fastq.gz NS-SG-10S-SG-07_S7_L007_R1_001.fastq.gz > string_S7_R1.fastq.gz
+
+
+cat NS-SG-10S-SG-07_S7_L006_R2_001.fastq.gz NS-SG-10S-SG-07_S7_L007_R2_001.fastq.gz > string_S7_R2.fastq.gz
+
+
+
+cat NS-SG-10S-SG-08_S8_L006_R1_001.fastq.gz NS-SG-10S-SG-08_S8_L007_R1_001.fastq.gz > string_S8_R1.fastq.gz
+
+
+cat NS-SG-10S-SG-08_S8_L006_R2_001.fastq.gz NS-SG-10S-SG-08_S8_L007_R2_001.fastq.gz > string_S8_R2.fastq.gz
+
+
+
+cat NS-SG-10S-SG-09_S9_L006_R1_001.fastq.gz NS-SG-10S-SG-09_S9_L007_R1_001.fastq.gz > string_S9_R1.fastq.gz
+
+
+cat NS-SG-10S-SG-09_S9_L006_R2_001.fastq.gz NS-SG-10S-SG-09_S9_L007_R2_001.fastq.gz > string_S9_R2.fastq.gz
+
+
+
+cat NS-SG-10S-SG-10_S10_L006_R1_001.fastq.gz NS-SG-10S-SG-10_S10_L007_R1_001.fastq.gz > string_S10_R1.fastq.gz
+
+
+cat NS-SG-10S-SG-10_S10_L006_R2_001.fastq.gz NS-SG-10S-SG-10_S10_L007_R2_001.fastq.gz > string_S10_R2.fastq.gz
+
+
