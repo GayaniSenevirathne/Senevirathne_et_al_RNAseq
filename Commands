@@ -1,0 +1,17 @@
+# Load packages 
+
+$ module load gcc/6.2.0
+$ module load boost/1.55.0
+$ module load tbb/2017
+$ module load zlib/1.2.11
+$ module load bzip2/1.0.6
+$ module load xz/5.2.2
+$ module load salmon/0.10.2
+$ module load kallisto/0.44.0
+$ module load  macs2/2.1.0
+$ module load bowtie2/2.3.2
+$ module load samtools/1.6.0
+
+<<downloaded the genome sequence from Ensembl Xenopus tropical - v9.1.dna.toplevel.fa.gz>>
+
+#use Bowtie2 to build the reference index
