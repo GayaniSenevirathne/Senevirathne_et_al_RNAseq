@@ -58,8 +58,6 @@ dds <- dds[keep,]
 head(dds)
 dds$condition <- factor(dds$condition, levels = c("methimazole","control"))
 dds$timepoints <-factor(dds$timepoints, levels = c("t1","t2", "t3"))
-
-
 #running dds
 dds <- DESeq(dds)
 
